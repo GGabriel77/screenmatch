@@ -9,7 +9,7 @@ public class Movie {
 
     void showMovieDescription(){
         System.out.println("Nome do filme: " + name + ".");
-        System.out.println("Ano de lançamento: " + releaseYear);
+        System.out.println("Ano de lançamento: " + releaseYear + ".");
         System.out.println("Tempo de filme em minutos: " + movieTime);
     }
 
