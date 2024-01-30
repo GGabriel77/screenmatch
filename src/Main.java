@@ -1,3 +1,5 @@
+import br.com.screenmatch.model.Movie;
+
 public class Main {
     public static void main(String[] args) {
         Movie myMovie =  new Movie();
@@ -10,8 +12,10 @@ public class Main {
         myMovie.ratingValiation(7);
         myMovie.ratingValiation((10));
 
-        System.out.println(myMovie.plusRating);
-        System.out.println(myMovie.allReviews);
+        //System.out.println(myMovie.plusRating);
+        System.out.println("Total de avaliações: " + myMovie.getAllReviews());
         System.out.println(myMovie.getAvarege());
+
+
     }
 }
