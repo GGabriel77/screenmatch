@@ -1,4 +1,5 @@
 import br.com.screenmatch.model.Movie;
+import br.com.screenmatch.model.Serie;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +16,13 @@ public class Main {
         //System.out.println(myMovie.plusRating);
         System.out.println("Total de avaliações: " + myMovie.getAllReviews());
         System.out.println(myMovie.getAvarege());
+
+        Serie theOffice = new Serie();
+        theOffice.setTemporadas(9);
+        theOffice.setEpisodiosPorTemporada(16);
+        theOffice.setMinutosPorEpisodio(23);
+        theOffice.setName("The Office");''
+
 
 
     }
