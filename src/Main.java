@@ -1,3 +1,4 @@
+import br.com.screenmatch.calculo.TimeCalculate;
 import br.com.screenmatch.model.Movie;
 import br.com.screenmatch.model.Serie;
 import br.com.screenmatch.model.Titulo;
@@ -27,7 +28,17 @@ public class Main {
         theOffice.setName("The Office");
         System.out.println("Duração para mara maratonar The Office: " + theOffice.getMinutesDurationTime());
 
+        Movie anotherMovie =  new Movie();
+        anotherMovie.setName("The Hunger Games");
+        anotherMovie.setReleaseYear(2012);
+        anotherMovie.setMinutesDurationTime(177);
 
+        TimeCalculate calculator = new TimeCalculate();
+
+        calculator.inclui(myMovie);
+        calculator.inclui(anotherMovie);
+        calculator.inclui(theOffice);
+        System.out.println(calculator.getTotalTime());
 
     }
 }
