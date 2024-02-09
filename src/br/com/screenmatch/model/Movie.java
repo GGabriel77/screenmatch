@@ -1,6 +1,8 @@
 package br.com.screenmatch.model;
 
-public class Movie extends Titulo{
+import br.com.screenmatch.calculo.Ratable;
+
+public class Movie extends Titulo implements Ratable {
     private String diretor;
 
     public String getDiretor() {
@@ -9,5 +11,10 @@ public class Movie extends Titulo{
 
     public void setDiretor(String diretor) {
         this.diretor = diretor;
+    }
+
+    @Override
+    public int getRating() {
+        return (int) getAvarege() / 2;
     }
 }

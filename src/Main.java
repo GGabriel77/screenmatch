@@ -1,4 +1,6 @@
+import br.com.screenmatch.calculo.RecommendationFilter;
 import br.com.screenmatch.calculo.TimeCalculate;
+import br.com.screenmatch.model.Episodio;
 import br.com.screenmatch.model.Movie;
 import br.com.screenmatch.model.Serie;
 import br.com.screenmatch.model.Titulo;
@@ -39,6 +41,17 @@ public class Main {
         calculator.inclui(anotherMovie);
         calculator.inclui(theOffice);
         System.out.println(calculator.getTotalTime());
+
+        RecommendationFilter filter = new RecommendationFilter();
+
+        filter.filter(myMovie);
+
+        Episodio episodio = new Episodio();
+
+        episodio.setNumber(1);
+        episodio.setSerie(theOffice);
+        episodio.setVisualizationTotal(300);
+        filter.filter(episodio);
 
     }
 }
